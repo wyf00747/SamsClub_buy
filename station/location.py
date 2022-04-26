@@ -44,6 +44,8 @@ def getRecommendStoreListByLocation(longitude, latitude):
             if storeList[i].get("storeId") != '9991' and storeList[i].get("storeId") != '9996':
                 key = str(storeList[i].get("storeId")) + "==" + str(storeList[i]['storeRecmdDeliveryTemplateData']['storeDeliveryTemplateId']) + "--" + str(storeList[i].get("storeName"))
                 print(key)
+                # print(storeList[i])
+                # print(json.dumps(storeList[i]))
                 storeList_item[key] = {
                     'storeType': storeList[i].get("storeType"),
                     'storeId': storeList[i].get("storeId"),
@@ -58,18 +60,18 @@ def getRecommendStoreListByLocation(longitude, latitude):
 
 # getRecommendStoreListByLocation(121,31)
 storeList_item = {}
-longStart = 12114
-longEnd = 12164
+longStart = 12104
+longEnd = 12194
 
-laStart = 3040
-laEnd = 3104
+laStart = 3090
+laEnd = 3142
 
 fw = open('log.txt', 'w')
 
 # 步进默认6,需要细致的可以往小了调
-for long in range(longStart, longEnd, 6):
+for long in range(longStart, longEnd, 5):
     long = long / 100
-    for la in range(laStart, laEnd, 6):
+    for la in range(laStart, laEnd, 5):
         la = la / 100
         getRecommendStoreListByLocation(long, la)
         sleep(0.5)
