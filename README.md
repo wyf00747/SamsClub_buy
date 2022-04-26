@@ -30,7 +30,6 @@ sam_buy_bao_gong.py 保供功能,加入购物车后动结算
 
 修复极速达时间段太多导致线程过多的问题,现在默认只取最后2个
 
-
 ## 第一件事: 抓包获取headers里的authtoken,网上搜索手机抓包,推荐charles
 ## 第二件事: 确保安装了 requests 组件
 #### 引入 requests 组件
