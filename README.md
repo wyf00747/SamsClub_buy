@@ -37,7 +37,6 @@ sam_buy_bao_gong.py 保供功能,加入购物车后动结算
 ```bash
 pip install --index-url https://pypi.douban.com/simple/ requests
 ```
-
 ## 保供套餐 操作步骤
 
 1: sam_buy_bao_gong.py 类里填写authtoken, barkid(选填)直接执行
