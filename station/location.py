@@ -122,6 +122,6 @@ fw.close()
 
 fw = open('list.txt', 'w')
 for k, v in storeList_item.items():
-    fw.write(k + ":" + json.dumps(v) + "\n")
+    fw.write(k + ":" + v + "\n")
 fw.close()
 
